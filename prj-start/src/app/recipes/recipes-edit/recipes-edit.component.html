@@ -1,0 +1,45 @@
+<div class="row" style="margin-top: 2rem;">
+    <div class="col-xs-12">
+        <form style="margin-left: -1.5rem;" (ngSubmit)="onAddItem(f)" #f="ngForm">
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="name">Name</label>
+                    <input
+                     type="text" 
+                     id="name" 
+                     class="form-control"
+                     name="name" 
+                    >
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="description">Description</label>
+                    <textarea
+                     type="text"
+                     id="description" 
+                     class="form-control" 
+                     name="description" 
+                    ></textarea>
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="imagePath">Image URL</label>
+                    <textarea
+                     type="text"
+                     id="imagePath" 
+                     class="form-control" 
+                     name="imagePath" 
+                    ></textarea>
+                </div>
+                <div class="row" style="margin-left: 0;">
+                    <div class="col-xs-12">
+                        <button
+                         class="btn btn-success" 
+                         type="submit" 
+                         style="margin-right: 1rem;" 
+                        >Save</button>
+                        <button class="btn btn-danger" type="button" style="margin-right: 1rem;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
