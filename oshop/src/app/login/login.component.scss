@@ -1,0 +1,76 @@
+.auth {
+    margin: 0 auto;
+    min-height: 22rem;
+    width: 28rem;
+    background-color: var(--color-yellow-1);
+    border-radius: 2rem;
+}
+
+.form {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    &__text-header {
+        margin: 0 auto;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--color-primary)
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    &__row:last-child {
+        margin-bottom: 0rem;
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        left: .75rem;
+    }
+
+    &__input {
+        border-radius: 2rem;
+        outline: none;
+        border: none;
+        width: 22rem;
+        height: 3.5rem;
+        padding: 1rem;
+        padding-left: 3rem;
+        background-color: var(--color-grey-light-2);
+        
+    }
+}
+
+.btn {
+    width: 100%;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    padding: .7rem;
+    text-align: center;
+    background-color: var(--color-grey-light-2);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.text-error {
+    margin-bottom: 1rem;
+    color: red;
+}
