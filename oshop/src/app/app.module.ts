@@ -14,6 +14,11 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+import { AdminProductsFormComponent } from './admin/admin-products-form/admin-products-form.component';
+import { FooterComponent } from './footer/footer.component';
+import { CardComponent } from './card/card.component';
+import { MenuComponent } from './menu/menu.component';
+import { ItemMenuComponent } from './item-menu/item-menu.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { FormsModule } from '@angular/forms';
     AdminProductsComponent,
     AdminOrdersComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdminProductsFormComponent,
+    FooterComponent,
+    CardComponent,
+    MenuComponent,
+    ItemMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
     const email = f.value.email;
     const password = f.value.password
     this.loginService.onCheckLogin(email, password).subscribe(res => {
+      console.log(res);
       this.error$  = observableOf(res);
     })
   }
