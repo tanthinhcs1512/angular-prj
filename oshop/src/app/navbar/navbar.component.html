@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="header__user-nav">
-        <a href class="user-nav__login" *ngIf="email$ | async as email; else info">{{email}}</a>
+        <a href class="user-nav__login" *ngIf="user$ | async as user; else info">{{user}}</a>
         <div appDropdown class="dropdown-content">
             <a class="dropdown-item" routerLink="/my/orders">My Orders</a>
             <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
