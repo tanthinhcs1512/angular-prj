@@ -40,6 +40,14 @@
         
     }
 
+    &__select {
+        padding: 1rem;
+        padding-left: 3rem;
+        border: none;
+        outline: none;
+        background-color: var(--color-grey-light-2);
+    }
+
     &__label {
         padding: .5rem 0rem;
         font-size: 1.4rem;
@@ -61,16 +69,21 @@
     background-color: var(--color-grey-light-2);
 }
 
+.option { padding: 1rem;}
+
 .btn:hover {
     cursor: pointer;
 }
 
 .text-error {
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
     color: red;
 }
 
 .display-content {
     flex: 1;
-    background-color: orangered;
+}
+
+.form-card {
+    margin: auto 0;
 }

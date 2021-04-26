@@ -50,6 +50,7 @@
 }
 
 .user-nav {
+    position: relative;
     &__login {
         text-decoration: none;
         text-transform: uppercase;
@@ -57,4 +58,34 @@
         font-weight: 700;
         color: var(--color-primary);
     }
+}
+.dropdown-content {
+    position: absolute;
+    width: 16rem;
+    display: none;
+    flex-direction: column;
+    background-color: #FFFF;
+    border: .1rem solid var(--color-primary);
+}
+
+.dropdown-item, .dropdown-item:link, .dropdown-item:visited {
+    padding: 1rem .5rem;
+    margin: .5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-grey-light-3);
+    background-color: var(--color-primary);
+    border-radius: 1rem;
+    z-index: 10;
+}
+
+.dropdown-item:hover, .dropdown-item:link:hover, .dropdown-item:visited:hover {
+    cursor: pointer;
+    background: var(--color-yellow-1);
+}
+
+.show {
+    display: flex;
 }

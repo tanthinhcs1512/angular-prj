@@ -12,11 +12,11 @@
     </div>
     <div class="header__user-nav">
         <a href class="user-nav__login" *ngIf="email$ | async as email; else info">{{email}}</a>
-        <div class="dropdown-content">
+        <div appDropdown class="dropdown-content">
             <a class="dropdown-item" routerLink="/my/orders">My Orders</a>
             <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
             <a class="dropdown-item" routerLink="/admin/products">Manage Products</a>
-            <a class="dropdown-item" >Logout</a>
+            <a class="dropdown-item">Logout</a>
         </div>
         <ng-template #info>
             <a href class="user-nav__login">Login</a>

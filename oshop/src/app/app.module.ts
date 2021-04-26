@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,12 +14,14 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminProductsFormComponent } from './admin/admin-products-form/admin-products-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './card/card.component';
 import { MenuComponent } from './menu/menu.component';
 import { ItemMenuComponent } from './item-menu/item-menu.component';
+
+import { DropdownDirective } from './dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -37,12 +40,15 @@ import { ItemMenuComponent } from './item-menu/item-menu.component';
     FooterComponent,
     CardComponent,
     MenuComponent,
-    ItemMenuComponent
+    ItemMenuComponent, 
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

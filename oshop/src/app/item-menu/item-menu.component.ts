@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-item-menu',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-menu.component.scss']
 })
 export class ItemMenuComponent implements OnInit {
+
+  @Input()
+  name: string;
 
   constructor() { }
 

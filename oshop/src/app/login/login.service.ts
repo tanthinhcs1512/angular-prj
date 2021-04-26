@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable, of as observableOf } from 'rxjs';
 import { User } from './user.model';
 import { LocalStorageService } from '../local-storage.service';
@@ -10,7 +11,8 @@ export class LoginService {
         {email: 'tanthinh.cs1512@gmail.com', password: '123456'},
     ];
 
-    constructor(private localStorageService: LocalStorageService) {
+    constructor(private httpClient: HttpClient
+        ,private localStorageService: LocalStorageService) {
     }
 
     onCheckLogin(email: string, password: string): Observable<Boolean> {

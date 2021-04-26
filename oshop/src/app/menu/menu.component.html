@@ -1,1 +1,5 @@
-<p>menu works!</p>
+<ul class="side-nav">
+    <li class="side-nav__item" *ngFor="let category of category$ | async">
+        <a href="#" class="side-nav__link">{{category.name}}</a>
+    </li>
+</ul>

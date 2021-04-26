@@ -1,0 +1,19 @@
+.home {
+    display: flex;
+    &__side-bar {
+        flex: 0 0 22%;
+    }
+    &__content {
+        margin-left: 2rem;
+        border-radius: .2rem;
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.item-product {
+    width: 40%;
+    margin-bottom: 2rem;
+}

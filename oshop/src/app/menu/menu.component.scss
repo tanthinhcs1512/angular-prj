@@ -1,0 +1,28 @@
+.side-nav {
+    font-size: 1.5rem;
+    list-style: none;
+    border:  .1rem solid var(--color-grey-light-4);
+    border-radius: .5rem;
+
+    &__item {
+        background-color: var(--color-primary);
+        margin: .5rem .5rem;
+        border-radius: 1rem;
+    }
+
+    &__link:link, &__link:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1rem 1.5rem;
+        font-weight: 700;
+        color: #FFF;
+    }
+
+    &__link:link:hover, &__link:visited:hover {
+        border-radius: 1rem;
+        background-color: var(--color-yellow-1);
+        cursor: pointer;
+    }
+
+}

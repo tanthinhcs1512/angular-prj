@@ -1,1 +1,19 @@
-<p>card works!</p>
+<div class="card">
+    <div class="card-inner">
+        <div class="card__header-card">
+            <img
+             [src]="imgUrl" 
+             [alt]="title" 
+             class="img">
+        </div>
+        <div class="card__body-card">
+            <h2 class="body-card__title">{{ title }}</h2>
+            <h2 class="body-card__price">{{ price }}</h2>
+        </div>
+    </div>
+    <div class="card-inner-end">
+        <div class="card__end-card">
+            <a href="#" class="card__link">Add to cart</a>
+        </div>
+    </div>
+</div>

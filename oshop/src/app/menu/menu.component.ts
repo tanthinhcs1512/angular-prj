@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Category } from '../category.model';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  category$: Observable<Category[]>;
+
+  constructor(private categoryService: CategoryService) { 
+    this.category$ = categoryService.getCategories();
+  }
 
   ngOnInit(): void {
   }
