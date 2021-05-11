@@ -1,0 +1,92 @@
+.header {
+
+    height: 10vh;
+    background-color: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+
+    &__content {
+        margin-left: 4rem;
+        color: #FFF;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+}
+
+.container {
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    position: relative;
+    display: block; 
+}
+
+.act {
+    display: flex;
+}
+
+
+.btn, btn:link, .btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+    outline: none;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+}
+
+
+
+.btn:last-child {
+    margin-left: 2rem;
+}
+
+.btn-white, .btn-white:link, .btn-white:visited {
+    background-color: #FFF;
+    color: var(--color-primary);
+    border: .2rem solid var(--color-primary);
+}
+
+.btn-red, .btn-red:link, .btn-red:visited {
+    background-color: var(--color-primary);
+    color: #FFF;
+    border: .2rem solid var(--color-primary);
+}
+
+.icon-modal {
+    color: #FFF;
+    background-color: var(--color-primary-light);
+    border: .2rem solid var(--color-primary);
+    margin-left: -.1rem;
+    border-top-left-radius: .2rem;
+    cursor: pointer;
+}
+
+
+.form {
+    margin: 1rem 2rem;
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 550;
+
+    }
+}
+
+.form-group {
+    min-height: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btn-form {
+    width: 100%;
+    padding: .75rem 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    background-color: var(--color-primary-light);
+}

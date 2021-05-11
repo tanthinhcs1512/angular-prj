@@ -1,0 +1,79 @@
+<header class="header">
+  <span class="header__content">Payment widget angular</span>
+</header>
+
+<div class="container">
+  
+  <div class="act">
+    <a #stripe class="btn btn-red" href (click)="onClick($event)">Stripe</a>
+    <a #payment class="btn btn-white" href (click)="onClick($event)">Payment</a>
+  </div>
+</div>
+
+<payment-modal #modal [body]="modalPayment" *paymentClickModal="[stripe,payment]">
+  <i class="fa fa-times fa-2x icon-modal" aria-hidden="true" (click)="modal.onCloseModal()"></i>
+</payment-modal>
+<ng-template #modalPayment>
+  <payment-tab-panel #tabPanel>
+    <payment-tab title="Stripe" #stripeTab>
+      <form class="form">
+        <div class="form-group">
+          <label class="form__label">Email</label>
+          <payment-input iconInput="fa-address-card">
+            <input inputRef payment-mask="Email">
+          </payment-input>
+        </div>
+        <div class="form-group">
+          <label class="form__label">Name</label>
+          <payment-input>
+            <input inputRef payment-mask="Name">
+          </payment-input>
+        </div>
+        <div class="form-group">
+          <label class="form__label">Card Number</label>
+          <payment-input iconInput="fa-address-card">
+            <input inputRef payment-mask="9999 9999 9999">
+          </payment-input>
+        </div>
+        <div class="form-group">
+          <label class="form__label">Card Date</label>
+          <payment-input>
+            <input inputRef payment-mask="99/999">
+          </payment-input>
+        </div>
+        <div class="form-group">
+          <label class="form__label">CVC</label>
+          <payment-input>
+            <input inputRef payment-mask="999">
+          </payment-input>
+        </div>
+        <div class="form-group">
+          <label class="form__label">Coupon Code</label>
+          <payment-input>
+            <input inputRef placeholder="Coupon Code (Optional)">
+          </payment-input>
+        </div>
+        <div class="form-group">
+          <button class="btn-form">
+            Trigger Stripe Payment
+          </button>
+        </div>
+      </form>
+    </payment-tab>
+    <payment-tab title="Payment" #paymentTab>
+      <form class="form">
+        <div class="form-group">
+          <label class="form__label">Coupon Code</label>
+          <payment-input>
+            <input inputRef placeholder="Coupon Code (Optional)">
+          </payment-input>
+        </div>
+        <div class="form-group">
+          <button class="btn-form">
+            Trigger Stripe Payment
+          </button>
+        </div>
+      </form>
+    </payment-tab>
+  </payment-tab-panel>
+</ng-template>

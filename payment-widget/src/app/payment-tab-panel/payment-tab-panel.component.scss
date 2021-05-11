@@ -1,0 +1,30 @@
+:host {
+    width: 100%;
+}
+
+.tab-list {
+    height: 3rem;
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--color-primary-light);
+
+    &__tab, &__tab:link, &__tab:visited {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 1rem;
+    }
+}
+
+.selected {
+    background-color: #FFF;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+    color: var(--color-primary);
+}

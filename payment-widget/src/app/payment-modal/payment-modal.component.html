@@ -1,0 +1,13 @@
+<div class="modal" (click)="onClickOutsideModal()">
+    <div class="modal__body" (click)="onCancelClick($event)">
+        <div class="modal__header">
+            <ng-content select="i"></ng-content>
+        </div>
+        <ng-container *ngIf="body else prjContent">
+            <ng-container *ngTemplateOutlet="body"></ng-container>
+        </ng-container>
+        <ng-template #prjContent>
+            <ng-content></ng-content>
+        </ng-template>
+    </div>
+</div>
