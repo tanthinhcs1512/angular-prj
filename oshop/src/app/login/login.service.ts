@@ -4,23 +4,21 @@ import { Observable, of as observableOf } from 'rxjs';
 import { User } from './user.model';
 import { LocalStorageService } from '../local-storage.service';
 
-@Injectable({providedIn: "root"})
+@Injectable({ providedIn: 'root' })
 export class LoginService {
+  private data: User[] = [
+    { email: 'tanthinh.cs1512@gmail.com', password: '123456' },
+  ];
 
-    private data: User[] = [
-        {email: 'tanthinh.cs1512@gmail.com', password: '123456'},
-    ];
+  constructor(
+    private httpClient: HttpClient,
+    private localStorageService: LocalStorageService
+  ) {}
 
-    constructor(private httpClient: HttpClient
-        ,private localStorageService: LocalStorageService) {
-    }
-
-    onCheckLogin(email: string, password: string): Observable<Boolean> {
-        const user = this.data.filter(e => e.email === email && e.password === password);
-        if (user != null && user.length > 0) {
-            this.localStorageService.saveEmail(email);
-            return observableOf(true);
-        }
-        return observableOf(false);
-    }
+  onCheckLogin(email: string, password: string): Observable<any> {
+    return this.httpClient.post('http://localhost:8080/oshop/login', {
+      email: email,
+      password: password,
+    });
+  }
 }

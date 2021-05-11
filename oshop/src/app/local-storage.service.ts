@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 import { Observable, of as observableOf } from 'rxjs';
 import { Product } from './product.model';
+import { User } from './login/user.model';
+import { UserResponse } from './user-response.model';
 
-@Injectable({providedIn: "root"})
+@Injectable({ providedIn: 'root' })
 export class LocalStorageService {
+  private NAME_TOKEN: string = 'jwtToken';
 
-    private NAME_TOKEN: string = "jwtToken";
-    
-    getEmail(): Observable<string> {
-        return observableOf(window.localStorage[this.NAME_TOKEN]);
-    }
+  getUser(): Observable<UserResponse> {
+    return observableOf(window.localStorage[this.NAME_TOKEN]);
+  }
 
-    saveEmail(email: string) {
-        window.localStorage[this.NAME_TOKEN] = email;
-    }
+  saveUser(user: UserResponse) {
+    window.localStorage[this.NAME_TOKEN] = user.email;
+  }
 
-    destroyEmail() {
-        window.localStorage.removeItem(this.NAME_TOKEN);
-    }
-
+  destroyUser() {
+    window.localStorage.removeItem(this.NAME_TOKEN);
+  }
 }
