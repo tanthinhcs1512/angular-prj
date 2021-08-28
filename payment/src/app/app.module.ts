@@ -16,6 +16,7 @@ import {
 import { PaymentClickModalDirective } from './payment-click-modal.directive';
 import { InputRefDirective } from './input-ref.directive';
 import { PaymentMaskDirective } from './payment-mask.directive';
+import { PaymentBreadcrumbComponent } from './components/payment-breadcrumb/payment-breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { PaymentMaskDirective } from './payment-mask.directive';
     PaymentInputComponent,
     InputRefDirective,
     PaymentMaskDirective,
+    PaymentBreadcrumbComponent,
   ],
   imports: [
     BrowserModule,
