@@ -1,5 +1,5 @@
 import { AfterContentInit, Component, ContentChild, Input, OnInit } from '@angular/core';
-import { InputRefDirective } from '../input-ref.directive';
+import { InputRefDirective } from '../..//input-ref.directive';
 
 @Component({
   selector: 'payment-input',

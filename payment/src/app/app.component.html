@@ -1,12 +1,11 @@
 <header class="header">
-  <span class="header__content">Payment widget angular</span>
+  <span class="header__content">Payment System</span>
 </header>
 
 <div class="container">
-  
   <div class="act">
-    <a #stripe class="btn btn-red" href (click)="onClick($event)">Stripe</a>
-    <a #payment class="btn btn-white" href (click)="onClick($event)">Payment</a>
+    <a #stripe class="btn btn-red" href (click)="onClick($event, false)">Stripe</a>
+    <a #payment class="btn btn-white" href (click)="onClick($event, true)">Payment</a>
   </div>
 </div>
 
@@ -55,7 +54,7 @@
         </div>
         <div class="form-group">
           <button class="btn-form">
-            Trigger Stripe Payment
+            Trigger Payment
           </button>
         </div>
       </form>
@@ -70,7 +69,7 @@
         </div>
         <div class="form-group">
           <button class="btn-form">
-            Trigger Stripe Payment
+            Trigger Payment
           </button>
         </div>
       </form>

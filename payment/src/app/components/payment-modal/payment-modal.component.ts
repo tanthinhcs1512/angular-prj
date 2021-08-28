@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { PaymentModalService } from '../payment-modal.service';
+import { PaymentModalService } from '../../payment-modal.service';
 
 @Component({
   selector: 'payment-modal',

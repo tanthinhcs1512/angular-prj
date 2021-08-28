@@ -96,7 +96,7 @@ export class PaymentMaskDirective implements OnInit {
     }
   }
 
-  handleRightArrow(cursorPos:any) {
+  handleRightArrow(cursorPos: any) {
     const valueAfterCursor = this.input.value.slice(cursorPos + 1);
 
     const nextPos =
@@ -110,7 +110,7 @@ export class PaymentMaskDirective implements OnInit {
     }
   }
 
-  handleBackspace(cursorPos:any) {
+  handleBackspace(cursorPos: any) {
 
     const previousPos = this.calculatePreviousCursorPos(cursorPos);
 
@@ -120,7 +120,7 @@ export class PaymentMaskDirective implements OnInit {
     }
   }
 
-  handleDelete(cursorPos:any) {
+  handleDelete(cursorPos: any) {
     this.overWriteChatAtPosition(this.input, cursorPos, '_');
     this.input.setSelectionRange(cursorPos, cursorPos);
   }
