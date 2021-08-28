@@ -1,5 +1,5 @@
 {
-  "name": "payment-widget",
+  "name": "payment",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

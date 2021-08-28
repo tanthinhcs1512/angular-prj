@@ -1,4 +1,3 @@
-import { ThrowStmt } from '@angular/compiler';
 import { AfterContentInit, Component, ContentChildren, Input, OnInit, QueryList, TemplateRef } from '@angular/core';
 import { PaymentTabComponent } from '../payment-tab/payment-tab.component';
 
